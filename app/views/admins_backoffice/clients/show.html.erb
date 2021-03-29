@@ -1,0 +1,12 @@
+
+<h1>Showing client details</h1>
+
+<p><strong>Name: </strong><%= @client.name %></p>
+<p><strong>Email: </strong><%= @client.email %></p>
+<p><strong>Birthdate: </strong><%= @client.birthdate %></p>
+
+<p>
+	<%= link_to 'Edit', edit_admins_backoffice_client_path(@client) %> |
+	<%= link_to 'Delete', admins_backoffice_client_path(@client), method: :delete, data: { confirm: 'Are you sure?' }%> |
+	<%= link_to 'Return to clients listing', admins_backoffice_clients_path %>
+</p>

@@ -1,0 +1,28 @@
+<% if @sale.errors.any? %>
+	<h2>The following errors prevented the sale from being saved:</h2>
+	<ul>
+		<% @sale.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	</ul>
+<% end %>
+<%= form_with(model: [:admins_backoffice, @sale], local: true) do |f| %>
+	<p>
+		<%= f.label :client_id %><br>
+		<%= f.collection_select :client_id, Client.all, :id, :name %>
+	</p>
+	<p>
+		<%= f.label :product_id %><br>
+		<% klass = f.object.class.model_name.param_key %>
+		<%= f.collection_select :product_ids, Product.all, :id, :name, {:include_blank => true}, {:multiple => true} %>
+	</p>
+	
+	<p>
+		<%= f.submit %>
+	</p>
+	
+	
+
+
+<% end %>
+

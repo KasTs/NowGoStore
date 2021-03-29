@@ -1,0 +1,18 @@
+
+<h1>Showing Sale details</h1>
+
+<p><strong>ID: </strong><%= @sale.id %></p>
+<p><strong>Client: </strong><%= @sale.client.name %></p>
+<p><strong>Products: </strong>
+	<ul>
+		<%= @sale.products.each do |product| %>
+			<li><%= product.name %></li>
+		<% end %>
+	</ul>
+</p>
+
+<p>
+	<%= link_to 'Edit', edit_admins_backoffice_sale_path(@sale) %> |
+	<%= link_to 'Delete', admins_backoffice_sale_path(@sale), method: :delete, data: { confirm: 'Are you sure?' }%> |
+	<%= link_to 'Return to sales listing', admins_backoffice_sales_path %>
+</p>

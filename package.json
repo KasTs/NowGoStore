@@ -1,0 +1,10 @@
+{
+  "name": "NowGo",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "jquery-easing": "^0.0.1"
+  }
+}

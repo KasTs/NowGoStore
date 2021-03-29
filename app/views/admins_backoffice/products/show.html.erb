@@ -1,0 +1,12 @@
+
+<h1>Showing Product details</h1>
+
+<p><strong>Name: </strong><%= @product.name %></p>
+<p><strong>Description: </strong><%= @product.description %></p>
+<p><strong>Price: </strong><%= @product.price %></p>
+
+<p>
+	<%= link_to 'Edit', edit_admins_backoffice_product_path(@product) %> |
+	<%= link_to 'Delete', admins_backoffice_product_path(@product), method: :delete, data: { confirm: 'Are you sure?' }%> |
+	<%= link_to 'Return to products listing', admins_backoffice_products_path %>
+</p>
